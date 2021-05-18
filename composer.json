@@ -1,4 +1,5 @@
-{    "autoload": {
+{ 
+"autoload": {
         "psr-4": {
             "Atlantic\\": "vendor\\atlantic\\php-classes\\src"
         }
