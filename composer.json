@@ -1,17 +1,4 @@
-{
-    "name": "juniornunes1990/atlanticnet",
-    "authors": [
-        {
-            "name": "Atlantic Tecnologia",
-            "email": "contato@atlanticnet.com"
-        }
-    ],
-    "require": {
-        "phpmailer/phpmailer": "5.2.22",
-        "slim/slim": "2.0",
-        "rain/raintpl": "3.0.0"
-    },
-    "autoload": {
+{    "autoload": {
         "psr-4": {
             "Atlantic\\": "vendor\\atlantic\\php-classes\\src"
         }
