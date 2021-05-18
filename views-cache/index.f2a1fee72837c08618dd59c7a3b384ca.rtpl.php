@@ -1,71 +1,5 @@
-<!DOCTYPE html>
-<!-- start html tag -->
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="nuhost responsive HTML & WHMCS hosting template">
-    <meta name="author" content="coodiv.net (nedjai mohamed)">
-    <link rel="icon" href="img/header/favicon.ico">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><body><!-- start body tag -->
 
-    <title>Atlantic Net</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-
-    <!-- flaticon styles -->
-    <link href="icons/flaticon.css" rel="stylesheet">
-
-    <!-- flaticon styles -->
-    <link href="icons-t/flaticon.css" rel="stylesheet">
-
-    <!-- main template styles -->
-    <link href="css/main.css" rel="stylesheet">
-
-    <!-- bootstrap offcanvas styles -->
-    <link href="css/bootstrap.offcanvas.min.css" rel="stylesheet">
-
-    <!-- fontawesome styles -->
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
-
-    <!-- animate styles -->
-    <link href="css/animate.css" rel="stylesheet">
-
-    <!-- responsive template styles -->
-    <link href="css/responsive.css" rel="stylesheet">	
-	
-	
-	<!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet"><!-- Nunito font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet"><!-- Montserrat font -->
-    <link href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700" rel="stylesheet"><!-- Heebo font -->
-	
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-
-
-    <!-- flickity Stylesheets -->
-    <link rel="stylesheet" href="css/flickity.min.css">
-
-	<!-- video modal -->
-	<link rel="stylesheet" href="css/modal-video.min.css">
-		
-		
-    <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-
-	<!-- technology icon Stylesheets -->
-    <link rel="stylesheet" href="technology-icon/flaticon.css">
-	
-</head>
-
-
-<body><!-- start body tag -->
-    
-
-	
   <!-- start modal video -->
   <div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -117,13 +51,13 @@
 			<!-- start video background -->
 			<div class="video-bg-nuhost-header">
 			<div id="video_cover"></div>
-			<video autoplay muted loop><source src="media/coodiv-vid.mp4" type="video/mp4"></video>
+			<video autoplay muted loop><source src="/res/site/media/coodiv-vid.mp4" type="video/mp4"></video>
 			<span class="video-bg-nuhost-header-bg"></span>
 			</div>
 			<!-- end video background -->
             <span class="courve-gb-hdr-top"></span>
 			<!------- header support ring ------->
-            <a class="support-header-ring" href="#"><img src="img/svgs/support.svg" alt="" /> <span>support team</span></a>
+            <a class="support-header-ring" href="#"><img src="/res/site/img/svgs/support.svg" alt="" /> <span>support team</span></a>
 			<!------- end header support ring ------->
         </div>
 		<!-- end header animations -->
@@ -134,9 +68,9 @@
                 <nav class="navbar navbar-expand-md navbar-light header-nav-algo-coodiv header-nav-algo-coodiv-v2">
 				        <!-- start logo place -->
                         <a class="navbar-brand" href="index.html">
-                        <img class="black-bg-logo" src="img/header/logo.png" alt="" />
+                        <img class="black-bg-logo" src="/res/site/img/header/logo.png" alt="" />
                         <!-- black background logo -->
-                        <img class="white-bg-logo" src="img/header/logo-b.png" alt="" />
+                        <img class="white-bg-logo" src="/res/site/img/header/logo-b.png" alt="" />
                         <!-- white background logo -->
                         <span>Soluções inteligentes</span>
 						</a>
@@ -232,7 +166,7 @@
 					<!-- start header account  -->
                     <ul class="account-place-header-nav">
                         <li class="nav-item dropdown">
-                            <a data-toggle="dropdown" aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="#"><img src="img/svgs/avatar.svg" alt="" /></a>
+                            <a data-toggle="dropdown" aria-haspopup="true" id="customarea" aria-expanded="false" class="accouting-h dropdown-toggle" href="#"><img src="/res/site/img/svgs/avatar.svg" alt="" /></a>
                             <div class="dropdown-menu login-drop-down-header" aria-labelledby="customarea">
 
                                 <form action="#" data-form="validate">
@@ -298,7 +232,7 @@
 	
     <section class="second-items-home"><!-- start second hosting plans -->
         <div class="container"><!-- start container -->
-            <div class="tittle-simple-one"><h5>Escolha o plano que se encaixa com você<span>Sem Fidelidade<br> Preço Fixo.</span></h5></div><!-- title -->
+            <div class="tittle-simple-one"><h5>Escolha o plano que se encaixa com você<span>Sem Fidelidade, Preço Fixo.</span></h5></div><!-- title -->
 
             <div class="mr-tp-70 mr-bt-50">
                 <div class="row">
@@ -703,131 +637,3 @@
             </div><!-- end container -->
 		</div><!-- end container -->
     </section><!-- end contact us section -->
-
-    <section class="footer-coodiv-thm pding-200"><!-- start footer section -->
-        <div class="container"><!-- start container -->
-            <div class="row justify-content-center"><!-- start row -->
-			
-                <div class="col-md-4"><!-- col -->
-                    <a class="footer-brand" href="#">
-                        <img src="img/header/logo.png" alt="">
-                    </a>
-
-                    <a class="footer-contact-a-hm"><i class="fas fa-phone"></i> 62 9 9800-3919</a> <!-- phone nubmer -->
-                    <a class="footer-contact-a-hm"><i class="fas fa-envelope"></i> atlantictecnologia@gmail.com</a> <!-- email -->
-                    <a class="footer-contact-a-hm"><i class="fas fa-map-marker-alt"></i> Rua 07 de Setembro Qd. 31 Lt. 07 Sala- 2, Centro, Colinas do Sul/GO CEP 73740-000</a> <!-- address -->
-                </div><!-- end col -->
-
-                <div class="col-md-2 quiq-links-footer-mb-st"><!-- col -->
-                    <h5 class="footer-title-simple">Links Uteís</h5><!-- title -->
-                    <ul class="main-menu-footer-mn">
-                        <li><a href="index.html">Pagina Inicial</a></li><!-- link -->
-                        <li><a href="about-us.html">A empresa</a></li><!-- link -->
-                        <li><a href="domain-search.html">Serviços</a></li><!-- link -->
-                        <li><a href="reseller-hosting.html">Planos</a></li><!-- link -->
-                        <li><a href="web-hosting.html">Cobertura</a></li><!-- link -->
-                    </ul>
-                </div><!-- end col -->
-
-                <div class="col-md-2 quiq-links-footer-mb-st"><!-- col -->
-                    <h5 class="footer-title-simple">A Empresa</h5><!-- title -->
-                    <ul class="main-menu-footer-mn">
-                        <li><a href="knowledgebase.html">Sobre</a></li><!-- link -->
-                        <li><a href="help-center.html">Perguntas</a></li><!-- link -->
-                        <li><a href="404.html">Problemas</a></li><!-- link -->
-                        <li><a href="blog.html">Novidades</a></li><!-- link -->
-                        <li><a href="contact.html">Contato</a></li><!-- link -->
-                    </ul>
-                </div><!-- end col -->
-
-				
-                <div class="col-md-3 stay-in-tch-footer-mb-st"><!-- col -->
-                    <h5 class="footer-title-simple">Mantenha Contato</h5><!-- title -->
-                    <form class="form-contain-home-subscribe"><!-- subscribe form -->
-                        <input type="email" id="email-subscribe" name="email-subscribe" placeholder="digite seu email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form><!-- end subscribe form -->
-
-                    <div class="footer-social-links"><!-- social icons -->
-                        <a class="facebookcc" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="dribbblecc" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="googlecc" href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a class="googlecc" href="#"><i class="fab fa-youtube"></i></a>
-                    </div><!-- end social icons -->
-                    <p class="copyright-footer-p">© Desenvolvido por: <b>AtlanticNet</b> - 2021</p><!-- copyright text -->
-
-                </div><!-- end col -->
-
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </section><!-- end footer section -->
-
-    <!------------------- JavaScript ------------------->
-
-    <!-- jquery -->
-    <script src="js/jquery.min.js"></script>
-	
-    <!-- popper JavaScript -->
-    <script src="js/popper.min.js"></script>
-
-    <!-- bootstrap JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- waypoints JavaScript -->
-    <script src="js/waypoints.min.js"></script>
-	
-	<!-- counterup JavaScript -->
-    <script src="js/jquery.counterup.min.js"></script>
-	
-    <!-- particles JavaScript -->
-	<script src="js/particles-code.js"></script>
-    
-    <!-- typed JavaScript -->
-    <script src="js/typed.js"></script>
-
-    <!-- smoothscroll JavaScript -->
-    <script src="js/smoothscroll.js"></script>
-
-    <!-- carousel JavaScript -->
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- parallax JavaScript -->
-    <script src="js/parallax.min.js"></script>
-
-    <!-- bootstrap offcanvas -->
-    <script src="js/bootstrap.offcanvas.min.js"></script>
-
-    <!-- flickity JavaScript -->
-    <script src="js/flickity.pkgd.min.js"></script>
-
-    <!-- template JavaScript -->
-    <script src="js/scripts.js"></script>
-
-    <!-- mailer JavaScript -->
-    <script src="js/mailer.js"></script>
-	
-	<!-- touchSwipe JavaScript -->
-    <script src="js/jquery.touchSwipe.min.js"></script>
-	
-	<!-- countdown JavaScript -->
-    <script src="js/jquery.countdown.min.js"></script>
-	
-	<!-- modal video JavaScript -->
-    <script src="js/modal-video.min.js"></script>
-	
-	<!-- particles JavaScript -->
-    <script src="js/particles.js"></script>
-	
-	<!-- filters JavaScript -->
-    <script src="js/mixitup.min.js"></script>
-	
-	<!-- video background JavaScript -->
-    <script src="js/video-bg.js"></script>
-
-   <!------------------- End javaScript ------------------->
-
-</body>
-<!-- end of body tag -->
-
-</html>
-<!-- end of html tag -->
