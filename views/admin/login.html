@@ -29,17 +29,17 @@
         <h4 class="auth-header">
           Acesso Administrativo
         </h4>
-        <form action="">
+        <form  action="/admin/login" method="post">
           <div class="form-group">
-            <label for="">Usuário</label><input class="form-control" placeholder="Digite seu usuário" type="text">
+            <label>Usuário</label><input class="form-control" name="username" placeholder="Digite seu usuário" type="text">
             <div class="pre-icon os-icon os-icon-user-male-circle"></div>
           </div>
           <div class="form-group">
-            <label for="">Senha</label><input class="form-control" placeholder="Digite sua senha" type="password">
+            <label for="">Senha</label><input class="form-control" name="password" placeholder="Digite sua senha" type="password">
             <div class="pre-icon os-icon os-icon-fingerprint"></div>
           </div>
           <div class="buttons-w">
-            <button class="btn btn-primary">Entrar</button>
+            <button type="submit" class="btn btn-primary">Entrar</button>
             <div class="form-check-inline">
               <label class="form-check-label"><input class="form-check-input" type="checkbox">Lembrar - me</label>
             </div>

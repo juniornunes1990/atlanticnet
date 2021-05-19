@@ -1,4 +1,4 @@
-<div class="content-i">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="content-i">
 <div class="content-box">
     <div class="element-wrapper">
     <h6 class="element-header">
@@ -31,16 +31,16 @@
                 </tr>
             </tfoot>
             <tbody>
-                {loop="$categories"}
+                <?php $counter1=-1;  if( isset($categories) && ( is_array($categories) || $categories instanceof Traversable ) && sizeof($categories) ) foreach( $categories as $key1 => $value1 ){ $counter1++; ?>
                 <tr>
-                    <td>{$value.descategory}</td>
-                    <td>{$value.dtregister}</td>
+                    <td><?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                    <td><?php echo htmlspecialchars( $value1["dtregister"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td width="10%" class="row-actions">
-                        <a href="/admin/categories/{$value.idcategory}"><i class="os-icon os-icon-ui-49"></i></a>
-                        <a class="danger" href="/admin/categories/{$value.idcategory}/delete"><i class="os-icon os-icon-ui-15"></i></a>
+                        <a href="/admin/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><i class="os-icon os-icon-ui-49"></i></a>
+                        <a class="danger" href="/admin/categories/<?php echo htmlspecialchars( $value1["idcategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete"><i class="os-icon os-icon-ui-15"></i></a>
                       </td>
                 </tr>
-                {/loop}	
+                <?php } ?>	
             </tbody>
         </table>
         </div>
