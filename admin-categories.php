@@ -18,6 +18,22 @@ $app->get("/admin/categories", function(){
 
 });
 
+$app->get("/admin/artigos/create", function(){
+
+	User::verifyLogin();
+	
+	$categories = Category::listAll();
+
+	$page = new PageAdmin();
+
+	$page->setTpl("artigos-create", [
+		'categories'=>$categories
+	]);
+
+	$page->setTpl("artigos-create");
+
+});
+
 $app->get('/admin/categories/create', function() {
 
 	User::verifyLogin();

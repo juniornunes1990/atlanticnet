@@ -6,13 +6,13 @@
     </h6>
     <div class="element-box">
         <h5 class="form-header">
-        Todoas categorias
+        Todas categorias
         </h5>
         <div class="form-desc">
             Aqui você pode cadastrar gerenciar todas as categorias cadastradas no sistema ou adicionar, editar ou apaga-lás.
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-primary" style="margin-top: -30px;" href="#">Adicionar Categoria</a><br>
+            <a class="btn btn-primary" style="margin-top: -30px;" href="/admin/categories/create">Adicionar Categoria</a><br>
         </div>
         <div class="table-responsive">
         <table id="dataTable1" width="100%" class="table table-striped table-lightfont">

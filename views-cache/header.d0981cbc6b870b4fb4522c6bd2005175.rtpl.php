@@ -819,7 +819,7 @@
                 <div class="sub-menu-i">
                   <ul class="sub-menu">
                     <li>
-                      <a href="#">Artigos</a>
+                      <a href="/admin/artigos">Artigos</a>
                     </li>
                     <li>
                       <a href="/admin/categories">Categorias</a>
@@ -861,7 +861,7 @@
               <span>Opções</span>
             </li>
             <li class=" has-sub-menu">
-              <a href="apps_bank.html">
+              <a href="#">
                 <div class="icon-w">
                   <div class="os-icon os-icon-package"></div>
                 </div>
@@ -925,7 +925,7 @@
               AtlanticNet
             </h4>
             <p>
-              para provedores
+             Acessar site abaixo
             </p>
             <div class="btn-w">
               <a class="btn btn-white btn-rounded" href="#" target="_blank">Visitar Site</a>
@@ -939,149 +939,14 @@
           <!--------------------
           START - Top Bar
           -------------------->
-          <div class="top-bar color-scheme-bright">
-            <div class="fancy-selector-w">
-              <div class="fancy-selector-current">
-                <div class="fs-img shadowless">
-                  <img alt="" src="img/company5.png">
-                </div>
-                <div class="fs-main-info">
-                  <div class="fs-name">
-                    RB Nome
-                  </div>
-                  <div class="fs-sub">
-                    <span>CPU:</span><strong>14%</strong>
-                  </div>
-                </div>
-                <div class="fs-selector-trigger">
-                  <i class="os-icon os-icon-arrow-down4"></i>
-                </div>
-              </div>
-              <div class="fancy-selector-options">
-                <div class="fancy-selector-option">
-                  <div class="fs-img shadowless">
-                    <img alt="" src="img/company1.png">
-                  </div>
-                  <div class="fs-main-info">
-                    <div class="fs-name">
-                      CMS Product
-                    </div>
-                    <div class="fs-sub">
-                      <span>New Tickets:</span><strong>32</strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="fancy-selector-option active">
-                  <div class="fs-img shadowless">
-                    <img alt="" src="img/company5.png">
-                  </div>
-                  <div class="fs-main-info">
-                    <div class="fs-name">
-                      Server Product
-                    </div>
-                    <div class="fs-sub">
-                      <span>New Tickets:</span><strong>17</strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="fancy-selector-option">
-                  <div class="fs-img shadowless">
-                    <img alt="" src="img/company3.png">
-                  </div>
-                  <div class="fs-main-info">
-                    <div class="fs-name">
-                      Compute Engine
-                    </div>
-                    <div class="fs-sub">
-                      <span>New Tickets:</span><strong>11</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="top-bar color-scheme-bright">          
             <!--------------------
             START - Top Menu Controls
             -------------------->
             <div class="top-menu-controls">
               <div class="element-search autosuggest-search-activator">
                 <input placeholder="pesquisar..." type="text">
-              </div>
-              <!--------------------
-              START - Messages Link in secondary top menu
-              -------------------->
-              <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
-                <i class="os-icon os-icon-mail-14"></i>
-                <div class="new-messages-count">
-                  12
-                </div>
-                <div class="os-dropdown light message-list">
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <div class="user-avatar-w">
-                          <img alt="" src="img/avatar1.jpg">
-                        </div>
-                        <div class="message-content">
-                          <h6 class="message-from">
-                            John Mayers
-                          </h6>
-                          <h6 class="message-title">
-                            Account Update
-                          </h6>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <div class="user-avatar-w">
-                          <img alt="" src="img/avatar2.jpg">
-                        </div>
-                        <div class="message-content">
-                          <h6 class="message-from">
-                            Phil Jones
-                          </h6>
-                          <h6 class="message-title">
-                            Secutiry Updates
-                          </h6>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <div class="user-avatar-w">
-                          <img alt="" src="img/avatar3.jpg">
-                        </div>
-                        <div class="message-content">
-                          <h6 class="message-from">
-                            Bekky Simpson
-                          </h6>
-                          <h6 class="message-title">
-                            Vacation Rentals
-                          </h6>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <div class="user-avatar-w">
-                          <img alt="" src="img/avatar4.jpg">
-                        </div>
-                        <div class="message-content">
-                          <h6 class="message-from">
-                            Alice Priskon
-                          </h6>
-                          <h6 class="message-title">
-                            Payment Confirmation
-                          </h6>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!--------------------
-              END - Messages Link in secondary top menu
-              --------------------><!--------------------
+              </div><!--------------------
               START - Settings Link in secondary top menu
               -------------------->
               <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
@@ -1135,7 +1000,7 @@
                         <a href="#"><i class="os-icon os-icon-mail-01"></i><span>Mensagens</span></a>
                       </li>
                       <li>
-                        <a href="users_profile_big.html"><i class="os-icon os-icon-user-male-circle2"></i><span>Perfil</span></a>
+                        <a href="#"><i class="os-icon os-icon-user-male-circle2"></i><span>Perfil</span></a>
                       </li>
                       <li>
                         <a href="#"><i class="os-icon os-icon-others-43"></i><span>Notificações</span></a>
