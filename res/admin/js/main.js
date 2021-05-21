@@ -205,9 +205,16 @@ $(function () {
 
   // #9. CKEDITOR ACTIVATION
 
-  if ($('#ckeditor1').length) {
-    CKEDITOR.replace('ckeditor1');
-  }
+  ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
 
   // #10. CHARTJS CHARTS http://www.chartjs.org/
 

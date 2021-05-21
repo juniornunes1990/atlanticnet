@@ -3,6 +3,7 @@
 use \Atlantic\PageAdmin;
 use \Atlantic\Model\User;
 use \Atlantic\Model\Artigo;
+use \Atlantic\Model\Category;
 
 $app->get("/admin/artigos", function(){
 
@@ -10,21 +11,14 @@ $app->get("/admin/artigos", function(){
 
     $artigos = Artigo::listAll();
 
+    $artigo = new Artigo();
+
     $page = new PageAdmin();
 
     $page->setTpl("artigos", [
-        'artigos'=>$artigos
+        'artigos'=>$artigos,
+        'categories'=>$artigo->getCategories()
     ]);
-
-});
-
-$app->get("/admin/artigos/create", function(){
-
-    User::verifyLogin();
-
-    $page = new PageAdmin();
-
-    $page->setTpl("artigos-create");
 
 });
 
@@ -40,6 +34,20 @@ $app->post("/admin/artigos/create", function(){
 
     header("Location: /admin/artigos");
     exit;
+
+});
+
+$app->get("/admin/artigos/create", function(){
+
+	User::verifyLogin();
+	
+	$category = Category::listAll();
+
+	$page = new PageAdmin();
+
+	$page->setTpl("artigos-create", [
+		'category'=>$category
+	]);
 
 });
 
@@ -94,5 +102,4 @@ $app->get("/admin/artigos/:idartigo/delete", function($idartigo){
 	exit;
 
 });
-
 ?>

@@ -32,16 +32,28 @@ class Artigo extends Model {
 
 	}
 
+	public function setUri($string){
+		$a = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜüÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ"!@#$%&*()_-+={[}]/?;:.,\\\'<>°ºª';
+		$b = 'aaaaaaaceeeeiiiidnoooooouuuuuybsaaaaaaaceeeeiiiidnoooooouuuyybyRr                                 ';	
+		$string = utf8_decode($string);
+		$string = strtr($string, utf8_decode($a), $b);
+		$string = strip_tags(trim($string));
+		$string = str_replace(" ","-",$string);
+		$string = str_replace(array("-----","----","---","--"),"-",$string);
+		return strtolower(utf8_encode($string));
+	}
+
 	public function save()
 	{
 
 		$sql = new Sql();
-
-		$results = $sql->select("CALL sp_artigos_save(:idartigo,:destitulo, :desartigo, :desurl)", array(
+		
+		$results = $sql->select("CALL sp_artigos_save(:idartigo,:destitulo, :desartigo, :idcategory, :desurl)", array(
 			":idartigo"=>$this->getidartigo(),
-			":destitulo"=>$this->getdesartigo(),
+			":destitulo"=>$this->getdestitulo(),
 			":desartigo"=>$this->getdesartigo(),
-			":desurl"=>$this->getdesurl()
+			":idcategory"=>$this->getidcategory(),
+			":desurl"=>$this->setUri($this->getdestitulo())
 		));
 
 		$this->setData($results[0]);
@@ -164,7 +176,7 @@ class Artigo extends Model {
 		$sql = new Sql();
 
 		return $sql->select("
-			SELECT * FROM tb_categories a INNER JOIN tb_artigoscategories b ON a.idcategory = b.idcategory WHERE b.idartigo = :idartigo
+		SELECT * FROM tb_categories a INNER JOIN tb_artigos b ON a.idcategory = b.idcategory
 		", [
 
 			':idartigo'=>$this->getidartigo()

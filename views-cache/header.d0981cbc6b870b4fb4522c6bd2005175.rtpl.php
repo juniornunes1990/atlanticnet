@@ -928,7 +928,7 @@
              Acessar site abaixo
             </p>
             <div class="btn-w">
-              <a class="btn btn-white btn-rounded" href="#" target="_blank">Visitar Site</a>
+              <a class="btn btn-white btn-rounded" href="http://atlantictecnologia.com" target="_blank">Visitar Site</a>
             </div>
           </div>
         </div>

@@ -1,41 +1,43 @@
-<div class="col-sm-12">
-    <div class="element-wrapper">
-      <div class="element-box">
-        <form id="formValidate" action="/admin/artigos/create" method="post">
-          <h5 class="form-header">
-            Formulário de cadastro de artigos
-          </h5>
-          <div class="form-desc">
-            Preencha o máximo de campos para que seu conteúdo para que possa ficar em uma melhor colocação no Ranking de busca.
-          </div>
-          <div class="form-group">
-            <label for=""> Titulo</label>
-            <input class="form-control" name="destitulo" data-error="Campo Titulo Obrigatório" placeholder="Digite o titulo de seu artigo" required="required" type="text">
-            <div class="help-block form-text with-errors form-control-feedback"></div>
-          </div>          
-          <div class="form-group">
-            <label for=""> Categoria</label>
-            <select name="" class="form-control">
-            {loop="$categories"}
-              <option value="">
-                {$value.descategory}
-              </option>
-            {/loop}
-            </select>
-          </div>
-          <div class="form-group">
-            <label> Conteúdo do Artigo</label>
-            <textarea class="form-control" name="desartigo" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="">URL</label>
-            <input class="form-control" type="text" name="desurl" data-error="Campo URL Obrigatório" placeholder="Digite a URL do seu artigo" required="required">
-            <div class="help-block form-text with-errors form-control-feedback"></div>
-          </div>
-          <div class="form-buttons-w">
-            <button class="btn btn-primary" type="submit"> Cadastrar</button>
-          </div>
-        </form>
+<div class="content-i">
+    <div class="content-box">
+      <div class="element-wrapper">
+        <h6 class="element-header">
+            Novo Artigo
+        </h6>
+        <div class="element-box">
+          <form id="formValidate" action="/admin/artigos/create" method="post">
+            <h5 class="form-header">
+              Formulário de cadastro de artigos
+            </h5>
+            <div class="form-desc">
+              Preencha o máximo de campos para que seu conteúdo para que possa ficar em uma melhor colocação no Ranking de busca.
+            </div>
+            <div class="form-group">
+              <label for=""> Titulo</label>
+              <input class="form-control" name="destitulo" data-error="Campo Titulo Obrigatório" placeholder="Digite o titulo de seu artigo" required="required" type="text">
+              <div class="help-block form-text with-errors form-control-feedback"></div>
+            </div>          
+            <div class="form-group">
+              <label for=""> Categoria </label>
+              <select name="idcategory" class="form-control">
+              {loop="$category"}
+                <option value="{$value.idcategory}">
+                  {$value.descategory}
+                </option>
+              {/loop}
+              </select>
+            </div>
+            <div class="form-group">
+              <label> Conteúdo do Artigo</label>
+              <textarea cols="80" id="editor" class="form-control" name="desartigo" rows="5">
+                <h5>Conteudo do seu artigo</h5>
+              </textarea>
+            </div>
+            <div class="form-buttons-w">
+              <button class="btn btn-primary" type="submit"> Cadastrar</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

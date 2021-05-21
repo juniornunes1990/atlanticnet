@@ -4,6 +4,7 @@ use \Atlantic\PageAdmin;
 use \Atlantic\Model\User;
 use \Atlantic\Model\Category;
 
+
 $app->get("/admin/categories", function(){
 
 	User::verifyLogin();
@@ -18,22 +19,6 @@ $app->get("/admin/categories", function(){
 
 });
 
-$app->get("/admin/artigos/create", function(){
-
-	User::verifyLogin();
-	
-	$categories = Category::listAll();
-
-	$page = new PageAdmin();
-
-	$page->setTpl("artigos-create", [
-		'categories'=>$categories
-	]);
-
-	$page->setTpl("artigos-create");
-
-});
-
 $app->get('/admin/categories/create', function() {
 
 	User::verifyLogin();
@@ -41,21 +26,6 @@ $app->get('/admin/categories/create', function() {
 	$page = new PageAdmin();
 	
 	$page->setTpl("categories-create");
-
-});
-
-$app->post("/admin/categories/create", function(){
-
-	User::verifyLogin();
-	
-	$category = new Category();
-
-	$category->setdata($_POST);
-
-	$category->save();
-
-	header("Location: /admin/categories");
-	exit;
 
 });
 
