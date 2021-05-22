@@ -29,6 +29,21 @@ $app->get('/admin/categories/create', function() {
 
 });
 
+$app->post("/admin/categories/create", function(){
+
+	User::verifyLogin();
+
+	$category = new Category();
+
+	$category->setData($_POST);
+
+	$category->save();
+
+	header('Location: /admin/categories');
+	exit;
+
+});
+
 $app->get("/admin/categories/:idcategory/delete", function($idcategory){
 
 	User::verifyLogin();

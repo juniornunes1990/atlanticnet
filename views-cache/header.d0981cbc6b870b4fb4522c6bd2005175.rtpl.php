@@ -546,17 +546,17 @@
         -------------------->
         <div class="menu-w color-scheme-dark color-style-default menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover">
           <div class="logo-w">
-            <a class="logo" href="index.html">
+            <a class="logo" href="/admin">
               <div class="logo-element"></div>
               <div class="logo-label">
-                Clean Admin
+                Atlantic
               </div>
             </a>
           </div>
           <div class="logged-user-w avatar-inline">
             <div class="logged-user-i">
               <div class="avatar-w">
-                <img alt="" src="img/avatar1.jpg">
+                <img alt="" src="/res/admin/img/avatar1.jpg">
               </div>
               <div class="logged-user-info-w">
                 <div class="logged-user-name">
@@ -572,7 +572,7 @@
               <div class="logged-user-menu color-style-bright">
                 <div class="logged-user-avatar-info">
                   <div class="avatar-w">
-                    <img alt="" src="img/avatar1.jpg">
+                    <img alt="" src="/res/admin/img/avatar1.jpg">
                   </div>
                   <div class="logged-user-info-w">
                     <div class="logged-user-name">
@@ -588,16 +588,16 @@
                 </div>
                 <ul>
                   <li>
-                    <a href="apps_email.html"><i class="os-icon os-icon-mail-01"></i><span>Mensagens</span></a>
+                    <a href="#"><i class="os-icon os-icon-mail-01"></i><span>Mensagens</span></a>
                   </li>
                   <li>
-                    <a href="users_profile_big.html"><i class="os-icon os-icon-user-male-circle2"></i><span>Perfil</span></a>
+                    <a href="#"><i class="os-icon os-icon-user-male-circle2"></i><span>Perfil</span></a>
                   </li>                  
                   <li>
                     <a href="#"><i class="os-icon os-icon-others-43"></i><span>Notificações</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="os-icon os-icon-signs-11"></i><span>Sair</span></a>
+                    <a href="/admin/logout"><i class="os-icon os-icon-signs-11"></i><span>Sair</span></a>
                   </li>
                 </ul>
               </div>
@@ -617,7 +617,7 @@
                   <li>
                     <a href="#">
                       <div class="user-avatar-w">
-                        <img alt="" src="img/avatar1.jpg">
+                        <img alt="" src="/res/admin/img/avatar1.jpg">
                       </div>
                       <div class="message-content">
                         <h6 class="message-from">
@@ -797,7 +797,7 @@
               <span>Principal</span>
             </li>
             <li class="selected has-sub-menu">
-              <a href="#">
+              <a href="/admin">
                 <div class="icon-w">
                   <div class="os-icon os-icon-layout"></div>
                 </div>

@@ -67,7 +67,7 @@
                         </a>
                       </div>
                       <div class="col-sm-6">
-                        <a class="element-box el-tablo centered trend-in-corner padded bold-label" href="apps_support_index.html">
+                        <a class="element-box el-tablo centered trend-in-corner padded bold-label" href="#">
                           <div class="value">
                             7
                           </div>
@@ -134,7 +134,7 @@
                 <thead>
                   <tr>
                     <th>
-                     Nome Cliente
+                     Nome
                     </th>
                     <th>
                       Plano
@@ -154,7 +154,7 @@
                   <tr>
                     <td>
                       <div class="user-with-avatar">
-                        <img alt="" src="img/avatar1.jpg"><span class="d-none d-xl-inline-block">Rosa Maria</span>
+                        <img alt="" src="img/avatar1.jpg"><span class="d-none d-xl-inline-block">Nome Conteudo </span>
                       </div>
                     </td>
                     <td class="text-center">

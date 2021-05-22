@@ -61,9 +61,11 @@ $app->get("/admin/artigos/:idartigo", function($idartigo){
 
     $page = new PageAdmin();
 
-    $page->setTpl("artigos-update", [
-        'artigo'=>$artigo->getValues()
+    $category = Category::listAll();
 
+    $page->setTpl("artigos-update", [
+        'artigo'=>$artigo->getValues(),
+        'category'=>$category
     ]);
 
 });

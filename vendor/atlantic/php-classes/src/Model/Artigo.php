@@ -176,8 +176,8 @@ class Artigo extends Model {
 		$sql = new Sql();
 
 		return $sql->select("
-		SELECT * FROM tb_categories a INNER JOIN tb_artigos b ON a.idcategory = b.idcategory
-		", [
+			SELECT * FROM tb_categories a INNER JOIN tb_artigos b ON a.idcategory = b.idcategory
+			", [
 
 			':idartigo'=>$this->getidartigo()
 		]);
