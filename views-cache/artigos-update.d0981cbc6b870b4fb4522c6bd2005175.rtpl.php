@@ -36,11 +36,6 @@
             <div class="form-group">
               <label for="file">Imagem</label>
               <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $artigo["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
-              <div class="box box-widget">
-                <div class="box-body">
-                  <img class="img-responsive" id="image-preview" src="<?php echo htmlspecialchars( $artigo["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" width="350px" alt="Imagem">
-                </div>
-              </div>
             </div>
             <div class="form-buttons-w">
               <button class="btn btn-primary" type="submit"> Editar Artigo</button>

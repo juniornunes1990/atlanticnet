@@ -92,7 +92,7 @@ class Artigo extends Model {
 		$sql = new Sql();
 
 		$sql->query("DELETE FROM tb_artigos WHERE idartigo = :idartigo", [
-			':idartigo'=>$this->getidartigo(),
+			':idartigo'=>$this->getidartigo()
 		]);
 
 	}
