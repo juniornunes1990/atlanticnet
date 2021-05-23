@@ -73,13 +73,26 @@ class Artigo extends Model {
 
 	}
 
+	public function getUri($uri)
+	{
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT * FROM tb_artigos WHERE idartigo = :idartigo", [
+			'desurl'=>$uri
+		]);
+
+		$this->setData($results[0]);
+
+	}
+
 	public function delete()
 	{
 
 		$sql = new Sql();
 
 		$sql->query("DELETE FROM tb_artigos WHERE idartigo = :idartigo", [
-			':idartigo'=>$this->getidartigo()
+			':idartigo'=>$this->getidartigo(),
 		]);
 
 	}
@@ -147,7 +160,7 @@ class Artigo extends Model {
 			"site" . DIRECTORY_SEPARATOR . 
 			"img" . DIRECTORY_SEPARATOR . 
 			"artigos" . DIRECTORY_SEPARATOR . 
-			$this->getidartigo() . ".jpg";
+			$this->setUri($this->getdestitulo()) . ".jpg";
 
 		imagejpeg($image, $dist);
 

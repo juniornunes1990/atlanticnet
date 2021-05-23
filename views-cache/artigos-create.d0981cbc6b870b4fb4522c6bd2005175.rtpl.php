@@ -5,7 +5,7 @@
             Novo Artigo
         </h6>
         <div class="element-box">
-          <form id="formValidate" action="/admin/artigos/create" method="post">
+          <form id="formValidate" action="/admin/artigos/create" method="post" enctype="multipart/form-data">
             <h5 class="form-header">
               Formulário de cadastro de artigos
             </h5>
@@ -32,6 +32,13 @@
               <textarea cols="80" id="editor" class="form-control" name="desartigo" rows="5">
                 <h5>Conteudo do seu artigo</h5>
               </textarea>
+            </div>
+            <div class="form-group">
+              <label for="file">Imagem</label>
+              <input type="file" class="form-control" id="file" name="file">
+              <div class="box box-widget">
+                
+              </div>
             </div>
             <div class="form-buttons-w">
               <button class="btn btn-primary" type="submit"> Cadastrar</button>

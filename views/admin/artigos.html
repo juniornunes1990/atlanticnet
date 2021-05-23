@@ -19,6 +19,7 @@
                 <table id="dataTable1" width="100%" class="table table-striped table-lightfont">
                     <thead>
                         <tr>
+                            <th>Imagem</th>
                             <th>Titulo</th>
                             <th>Categoria</th>
                             <th>Data de Criação</th>
@@ -27,6 +28,7 @@
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Imagem</th>
                             <th>Titulo</th>
                             <th>Categoria</th>
                             <th>Data de Criação</th>
@@ -36,6 +38,11 @@
                     <tbody>
                         {loop="$categories"}
                         <tr>
+                            <td>
+                            <div class="cell-image-list">
+                                <div class="cell-img" style="background-image: url(/res/site/img/artigos/{$value.desurl}.jpg)"></div>
+                            </div>
+                            </td>
                             <td>{$value.destitulo}</td>
                             <td>
                                 {$value.descategory}

@@ -5,7 +5,7 @@
             Editar Artigo
         </h6>
         <div class="element-box">
-          <form id="formValidate" action="/admin/artigos/{$artigo.idartigo}" method="post">
+          <form id="formValidate" action="/admin/artigos/{$artigo.idartigo}" method="post" enctype="multipart/form-data">
             <h5 class="form-header">
               Editar Artigo: <span style="color: darkcyan;">{$artigo.destitulo}</span>
             </h5>
@@ -32,6 +32,15 @@
               <textarea cols="80" id="editor" class="form-control" name="desartigo" rows="5">
                 <h5>{$artigo.desartigo}</h5>
               </textarea>
+            </div>
+            <div class="form-group">
+              <label for="file">Imagem</label>
+              <input type="file" class="form-control" id="file" name="file" value="{$artigo.desurl}">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" src="{$artigo.desphoto}" width="350px" alt="Imagem">
+                </div>
+              </div>
             </div>
             <div class="form-buttons-w">
               <button class="btn btn-primary" type="submit"> Editar Artigo</button>

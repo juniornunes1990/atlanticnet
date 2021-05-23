@@ -129,7 +129,7 @@
               <div class="container">
                   <nav class="navbar navbar-expand-md navbar-light header-nav-algo-coodiv header-nav-algo-coodiv-v2">
                           <!-- start logo place -->
-                          <a class="navbar-brand" href="index.html">
+                          <a class="navbar-brand" href="/">
                           <img class="black-bg-logo" src="/res/site/img/header/logo.png" width="150px" alt="" />
                           <!-- black background logo -->
                           <img class="white-bg-logo" src="/res/site/img/header/logo-b.png" width="150px" alt="" />
@@ -146,7 +146,7 @@
                       <!-- start navbar -->
                           <ul class="navbar-nav ml-auto">
                               <li class="nav-item">
-                                  <a class="nav-link" href="#">Inicio</a>                                
+                                  <a class="nav-link" href="/">Inicio</a>                                
                               </li>
                               
                               <li class="nav-item">
@@ -231,9 +231,9 @@
                               <div class="dropdown-menu login-drop-down-header" aria-labelledby="customarea">
   
                                   <form action="#" data-form="validate">
-  
+                                    <h5><img src="/res/site/img/svgs/avatar.svg" width="32px" alt="Area do Cliente" /> Area do Cliente</h5><br>
                                       <div class="form-group">
-                                          <input type="email" name="username" placeholder="E-mail" class="form-control" required>
+                                          <input type="email" name="username" placeholder="Usuário" class="form-control" required>
                                       </div>
   
                                       <div class="form-group">

@@ -32,11 +32,14 @@ $app->post("/admin/artigos/create", function(){
 
     $artigo->save();
 
+    $artigo->setPhoto($_FILES["file"]); 
+
     header("Location: /admin/artigos");
     exit;
 
 });
 
+//mostra categorias
 $app->get("/admin/artigos/create", function(){
 
 	User::verifyLogin();
@@ -88,7 +91,6 @@ $app->post("/admin/artigos/:idartigo", function($idartigo){
 	exit;
 
 });
-
 
 $app->get("/admin/artigos/:idartigo/delete", function($idartigo){
 

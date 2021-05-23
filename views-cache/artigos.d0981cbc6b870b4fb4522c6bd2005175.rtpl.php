@@ -19,6 +19,7 @@
                 <table id="dataTable1" width="100%" class="table table-striped table-lightfont">
                     <thead>
                         <tr>
+                            <th>Imagem</th>
                             <th>Titulo</th>
                             <th>Categoria</th>
                             <th>Data de Criação</th>
@@ -27,6 +28,7 @@
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Imagem</th>
                             <th>Titulo</th>
                             <th>Categoria</th>
                             <th>Data de Criação</th>
@@ -36,6 +38,11 @@
                     <tbody>
                         <?php $counter1=-1;  if( isset($categories) && ( is_array($categories) || $categories instanceof Traversable ) && sizeof($categories) ) foreach( $categories as $key1 => $value1 ){ $counter1++; ?>
                         <tr>
+                            <td>
+                            <div class="cell-image-list">
+                                <div class="cell-img" style="background-image: url(/res/site/img/artigos/<?php echo htmlspecialchars( $value1["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>.jpg)"></div>
+                            </div>
+                            </td>
                             <td><?php echo htmlspecialchars( $value1["destitulo"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                             <td>
                                 <?php echo htmlspecialchars( $value1["descategory"], ENT_COMPAT, 'UTF-8', FALSE ); ?>

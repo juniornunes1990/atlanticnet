@@ -5,7 +5,7 @@
             Editar Artigo
         </h6>
         <div class="element-box">
-          <form id="formValidate" action="/admin/artigos/<?php echo htmlspecialchars( $artigo["idartigo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post">
+          <form id="formValidate" action="/admin/artigos/<?php echo htmlspecialchars( $artigo["idartigo"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" method="post" enctype="multipart/form-data">
             <h5 class="form-header">
               Editar Artigo: <span style="color: darkcyan;"><?php echo htmlspecialchars( $artigo["destitulo"], ENT_COMPAT, 'UTF-8', FALSE ); ?></span>
             </h5>
@@ -32,6 +32,15 @@
               <textarea cols="80" id="editor" class="form-control" name="desartigo" rows="5">
                 <h5><?php echo htmlspecialchars( $artigo["desartigo"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
               </textarea>
+            </div>
+            <div class="form-group">
+              <label for="file">Imagem</label>
+              <input type="file" class="form-control" id="file" name="file" value="<?php echo htmlspecialchars( $artigo["desurl"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+              <div class="box box-widget">
+                <div class="box-body">
+                  <img class="img-responsive" id="image-preview" src="<?php echo htmlspecialchars( $artigo["desphoto"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" width="350px" alt="Imagem">
+                </div>
+              </div>
             </div>
             <div class="form-buttons-w">
               <button class="btn btn-primary" type="submit"> Editar Artigo</button>
