@@ -18,9 +18,11 @@ class Page {
 
         $this->options = array_merge($this->defaults, $opts);
 
+        $projectRoot = $this->resolveProjectRoot();
+
         $config = array(
-            "tpl_dir"   => $_SERVER["DOCUMENT_ROOT"].$tpl_dir,
-            "cache_dir" => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
+            "tpl_dir"   => $projectRoot.$tpl_dir,
+            "cache_dir" => $projectRoot."/views-cache/",
             "debug"     => false
         );
             Tpl::configure( $config );
@@ -28,8 +30,32 @@ class Page {
             $this->tpl = new Tpl;
 
             $this->setData($this->options["data"]);          
+            $this->tpl->assign("BASE_URL", self::getBaseUrl());
 
             if($this->options["header"] === true) $this->tpl->draw("header");        
+
+    }
+
+
+    private function resolveProjectRoot(){
+
+        if(isset($_SERVER["SCRIPT_FILENAME"]) && $_SERVER["SCRIPT_FILENAME"]){
+            return dirname($_SERVER["SCRIPT_FILENAME"]);
+        }
+
+        return dirname(__DIR__, 3);
+
+    }
+
+
+    public static function getBaseUrl(){
+
+        if(isset($_SERVER["SCRIPT_NAME"]) && $_SERVER["SCRIPT_NAME"]){
+            $basePath = rtrim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
+            return ($basePath === ".") ? "" : $basePath;
+        }
+
+        return "";
 
     }
 

@@ -1,6 +1,7 @@
 <?php
 
 use \Atlantic\PageAdmin;
+use \Atlantic\Page;
 use \Atlantic\Model\User;
 
 $app->get('/admin/users', function() {
@@ -38,7 +39,7 @@ $app->get("/admin/users/:iduser/delete", function($iduser){
 
 	$user->delete();
 
-	header("Location: /admin/users");
+	header("Location: ".Page::getBaseUrl()."/admin/users");
 	exit;
 
 });
@@ -73,7 +74,7 @@ $app->post("/admin/users/create", function(){
 
 	$user->save();
 
-	header("Location: /admin/users");	
+	header("Location: ".Page::getBaseUrl()."/admin/users");	
 	exit;
 
 });
@@ -92,7 +93,7 @@ $app->post("/admin/users/:iduser", function($iduser){
 
 	$user->update();
 
-	header("Location: /admin/users");
+	header("Location: ".Page::getBaseUrl()."/admin/users");
 	exit;
 
 });

@@ -5,6 +5,7 @@ namespace Atlantic\Model;
 use \Atlantic\DB\Sql;
 use \Atlantic\Model;
 use \Atlantic\Mailer;
+use \Atlantic\Page;
 
 class User extends Model {
 
@@ -103,9 +104,9 @@ class User extends Model {
 		if (!User::checkLogin($inadmin)) {
 
 			if ($inadmin) {
-				header("Location: /admin/login");
+				header("Location: ".Page::getBaseUrl()."/admin/login");
 			} else {
-				header("Location: /login");
+				header("Location: ".Page::getBaseUrl()."/login");
 			}
 			exit;
 

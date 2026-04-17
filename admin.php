@@ -1,6 +1,7 @@
 <?php
 
 use \Atlantic\PageAdmin;
+use \Atlantic\Page;
 use \Atlantic\Model\User;
 
 $app->get('/admin', function() {
@@ -28,7 +29,7 @@ $app->post('/admin/login', function() {
 
 	User::login($_POST["username"],$_POST["password"]);
 
-	header("Location: /admin");
+	header("Location: ".Page::getBaseUrl()."/admin");
 	exit;
 
 });
@@ -37,7 +38,7 @@ $app->get('/admin/logout', function() {
 	
 	User::logout();
 
-	header("Location: /admin/login");
+	header("Location: ".Page::getBaseUrl()."/admin/login");
 	exit;
 
 });
