@@ -1,6 +1,7 @@
 <?php
 
 use \Atlantic\PageAdmin;
+use \Atlantic\Page;
 use \Atlantic\Model\User;
 use \Atlantic\Model\Artigo;
 use \Atlantic\Model\Category;
@@ -34,7 +35,7 @@ $app->post("/admin/artigos/create", function(){
 
     $artigo->setPhoto($_FILES["file"]); 
 
-    header("Location: /admin/artigos");
+    header("Location: ".Page::getBaseUrl()."/admin/artigos");
     exit;
 
 });
@@ -87,7 +88,7 @@ $app->post("/admin/artigos/:idartigo", function($idartigo){
 
 	$artigo->setPhoto($_FILES["file"]);
 
-	header('Location: /admin/artigos');
+	header("Location: ".Page::getBaseUrl()."/admin/artigos");
 	exit;
 
 });
@@ -102,7 +103,7 @@ $app->get("/admin/artigos/:idartigo/delete", function($idartigo){
 
 	$artigo->delete();
 
-	header('Location: /admin/artigos');
+	header("Location: ".Page::getBaseUrl()."/admin/artigos");
 	exit;
 
 });

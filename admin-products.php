@@ -1,6 +1,7 @@
 <?php
 
 use \Atlantic\PageAdmin;
+use \Atlantic\Page;
 use \Atlantic\Model\User;
 use \Atlantic\Model\Product;
 
@@ -38,7 +39,7 @@ $app->post("/admin/products/create", function(){
 
     $product->save();
 
-    header("Location: /admin/products");
+    header("Location: ".Page::getBaseUrl()."/admin/products");
     exit;
 
 });
@@ -74,7 +75,7 @@ $app->post("/admin/products/:idproduct", function($idproduct){
 
 	$product->setPhoto($_FILES["file"]);
 
-	header('Location: /admin/products');
+	header("Location: ".Page::getBaseUrl()."/admin/products");
 	exit;
 
 });
@@ -90,7 +91,7 @@ $app->get("/admin/products/:idproduct/delete", function($idproduct){
 
 	$product->delete();
 
-	header('Location: /admin/products');
+	header("Location: ".Page::getBaseUrl()."/admin/products");
 	exit;
 
 });

@@ -1,6 +1,7 @@
 <?php
 
 use \Atlantic\PageAdmin;
+use \Atlantic\Page;
 use \Atlantic\Model\User;
 use \Atlantic\Model\Category;
 
@@ -39,7 +40,7 @@ $app->post("/admin/categories/create", function(){
 
 	$category->save();
 
-	header('Location: /admin/categories');
+	header("Location: ".Page::getBaseUrl()."/admin/categories");
 	exit;
 
 });
@@ -54,7 +55,7 @@ $app->get("/admin/categories/:idcategory/delete", function($idcategory){
 
 	$user->delete();
 
-	header("Location: /admin/categories");
+	header("Location: ".Page::getBaseUrl()."/admin/categories");
 	exit;
 
 });
@@ -87,7 +88,7 @@ $app->post("/admin/categories/:idcategory", function($idcategory){
 
 	$category->save();
 
-	header("Location: /admin/categories");
+	header("Location: ".Page::getBaseUrl()."/admin/categories");
 	exit;
 
 });

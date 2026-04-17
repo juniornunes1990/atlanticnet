@@ -1,6 +1,7 @@
 <?php
 
 use \Atlantic\PageAdmin;
+use \Atlantic\Page;
 use \Atlantic\Model\User;
 
 $app->get("/admin/forgot", function() {
@@ -18,7 +19,7 @@ $app->post("/admin/forgot", function(){
 
 $user = User::getForgot($_POST["email"]);
 
-header("Location: /admin/forgot/sent");
+header("Location: ".Page::getBaseUrl()."/admin/forgot/sent");
 exit;
 
 });

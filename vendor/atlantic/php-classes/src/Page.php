@@ -30,7 +30,7 @@ class Page {
             $this->tpl = new Tpl;
 
             $this->setData($this->options["data"]);          
-            $this->tpl->assign("BASE_URL", $this->resolveBaseUrl());
+            $this->tpl->assign("BASE_URL", self::getBaseUrl());
 
             if($this->options["header"] === true) $this->tpl->draw("header");        
 
@@ -48,7 +48,7 @@ class Page {
     }
 
 
-    private function resolveBaseUrl(){
+    public static function getBaseUrl(){
 
         if(isset($_SERVER["SCRIPT_NAME"]) && $_SERVER["SCRIPT_NAME"]){
             $basePath = rtrim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
